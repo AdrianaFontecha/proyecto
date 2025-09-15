@@ -1,0 +1,244 @@
+{
+	"info": {
+		"_postman_id": "2f3cdfe5-e37f-4b82-a8b7-cdcba1b49b86",
+		"name": "USUARIOS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46123304"
+	},
+	"item": [
+		{
+			"name": "raiz",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.1.2:3000/",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"2"
+					],
+					"port": "3000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "userCreate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n \"email\": \"micorreo@gmail.com\",\r\n \"name\": \"Pedro Nel\",\r\n \"lastname\": \"Dominguez\",\r\n\"phone\": \"741852\",\r\n \"image\": \"yyyy\",\r\n \"password\": \"9876546\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.1.2:3000/api/users/create",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"2"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"email\": \"micorreo@gmail.com\",\r\n \"password\": \"9876546\"\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.1.2:3000/api/users/login",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"2"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "usersAll",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJtaWNvcnJlb0BnbWFpbC5jb20iLCJpYXQiOjE3NTc4Njc2ODh9.izPLXv7y834PCZZnqwm949Bk_LhepZ2Dce19wp6O3MA",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "Authorization",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJtaWNvcnJlb0BnbWFpbC5jb20iLCJpYXQiOjE3NTc4NzA3Njd9.KoVMcJoIeCRQlwb71KXWnEZ0zHDdu6RcTp8dRSc-7_M",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"email\": \"micorreo2@gmail.com\",\r\n \"password\": \"1234567\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.1.2:3000/api/users",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"2"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "userById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.1.2:3000/api/users/1",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"2"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "userCreate",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "userUpdate",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"id\": \"1\",\r\n\"email\": \"pepito@perez.com\",\r\n\"name\": \"Pepe\",\r\n\"lastname\": \"Perez\",\r\n\"phone\": \"3203203210\",\r\n\"password\": \"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.1.2:3000/api/users/update",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"2"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "userDelete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.1.2:3000/api/users/delete/1",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"2"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
